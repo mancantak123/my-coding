@@ -23,8 +23,9 @@ int main(){
         }
         
         cout<<endl;
-
-        cin.get();
     }
+
+    cin.get();
+
     
 }
