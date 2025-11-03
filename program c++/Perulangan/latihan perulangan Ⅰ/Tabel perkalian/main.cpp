@@ -11,7 +11,7 @@ int main(){
         cout<<"perkalian berapa? :";
         std::cin >> perkalian;
         
-        cout<<"Tabel perkalian"<<perkalian<<endl;
+        cout<<"Tabel perkalian "<<perkalian<<endl;
         for(int i=1; i<= 10;i++){
             cout<< i << " x " <<perkalian<<" = "<< i * perkalian<<endl;
         }
