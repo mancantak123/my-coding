@@ -9,5 +9,7 @@ void cetakSalam(){
 
 int main(){
     cetakSalam();
+
+    cin.get();
     return 0;
 }
