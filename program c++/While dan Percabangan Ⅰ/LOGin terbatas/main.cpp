@@ -21,10 +21,11 @@ int main(){
         }else{
             cout<<"coba lagi"<<endl;
             percobaan++;
+            if(percobaan == 3){
+                cout<<"akun anda diblokir karena sudah 3 percobaan untuk login"<<endl;
+                break;
+            }
             continue;
         }
-    }
-    if(percobaan >= 3){
-        cout<<"akun anda diblokir karena sudah 3 percobaan untuk login"<<endl;
     }
 }
