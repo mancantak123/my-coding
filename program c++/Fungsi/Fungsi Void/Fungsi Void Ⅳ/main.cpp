@@ -15,9 +15,6 @@ void login(string username , string password){
     }
     
 }
-
-
-
 int main(){
     string nama,password,a;
     while(true){
