@@ -20,9 +20,15 @@ int main(){
     }
     cout<<endl;
     
+    cout<<"nama_Vector.erase(nama_Vector.begin + index)"<<endl; //nama_Vector.erase(nama_Vector.begin + index)
     V.erase(V.begin() + 1);
-
+    for(int i : V){ // for each !!
+        cout<< i << " ";
+    }
+    cout<<endl;
     
+    cout<<"nama_Vector.insert(nama_vector.begin() + index , value);"<<endl;
+    V.insert(V.begin() + 3 , 45); // nama Vector.insert(nama_vector.begin() + index , value);
     for(int i : V){ // for each !!
         cout<< i << " ";
     }
