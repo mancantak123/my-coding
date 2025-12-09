@@ -8,7 +8,7 @@ class Siswa{
         int umur;
         
         void setNilai(int n){
-            if(n < 18 && n > 15){
+            if(n >= 15 && n <= 18){
                 umur = n;
             }else{
                 cout<<"tidak valid!!"<<endl;
