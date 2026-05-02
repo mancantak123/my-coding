@@ -60,7 +60,7 @@ Anda dapat menduplikasi seluruh isi repositori ini ke perangkat lokal Anda denga
 
 <details style="margin-bottom: 20px; border: 1px solid #333; border-radius: 8px; background: #1a1a1a;">
   <summary style="padding: 15px; cursor: pointer; font-weight: bold; color: #fff; background: #2d2d2d; border-radius: 8px;">
-    📂 Paduan Competitive programing 1 & 2 ▼
+    📂 Paduan Competitive programing 1&2 ▼
   </summary>
   <br>
   <p><i><b>Competitive programing</b></i> adalah program pengenalan dan contoh program competitive , dimana anda mengenal nama batasan waktu dan batasan memory untuk program , selain itu anda dapat menemukan batasan tipe Data yang digunakan oleh program</p>
