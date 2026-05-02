@@ -16,21 +16,36 @@
   Platform ini merupakan sebuah <b>repositori pusat</b> yang didedikasikan sebagai wadah integrasi bagi seluruh dokumentasi skrip dan karya digital yang telah dikembangkan secara personal oleh <b>Nikco</b>. Arsip ini merangkum evolusi teknis yang komprehensif, mulai dari implementasi sintaks <b>fundamental</b> dan logika dasar pemrograman hingga pengembangan <b>algoritma tingkat tinggi</b> yang dirancang khusus untuk memenuhi kebutuhan <b>competitive programming</b>. Lebih dari sekadar tempat penyimpanan data, platform ini berfungsi sebagai <b>laboratorium digital</b> yang dinamis untuk melakukan berbagai ujicoba program dan eksperimen teknis, guna memvalidasi efisiensi kode serta mengasah ketajaman pemecahan masalah dalam berbagai skenario komputasi yang kompleks.
 </p>
 
----
 
-## 📋 Informasi Umum
+### Bahasa Pemrograman dan Lingkungan
 
-### 💻 Bahasa Pemrograman & Lingkungan
-Seluruh program dalam repositori ini dikembangkan dengan spesifikasi teknis sebagai berikut:
-* **Bahasa Utama:** C++ (Standard C++11 atau yang lebih baru).
-* **Bahasa Pendukung:** Python untuk otomasi dan skrip tambahan.
-* **Antarmuka:** Semua program berbasis **CLI (Command Line Interface)**, yang berarti interaksi dilakukan sepenuhnya melalui terminal atau command prompt untuk menjamin efisiensi eksekusi.
-* **Compiler:** Direkomendasikan menggunakan `g++` (MinGW/GCC) atau IDE seperti Dev-C++.
+<table>
+  <tr>
+    <td width="100"><b>C++</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Language-C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" align="center">
+      &nbsp; Fokus pada implementasi algoritma berperforma tinggi dan penyelesaian tantangan kompetitif.
+    </td>
+  </tr>
+  <tr>
+    <td><b>Python</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Language-Python-3776AB?style=flat-square&logo=python&logoColor=white" align="center">
+      &nbsp; Digunakan untuk logika prototyping, analisis data, dan pengembangan skrip otomasi.
+    </td>
+  </tr>
+</table>
 
+### Spesifikasi Teknis
+
+* **Antarmuka:** Berbasis **CLI (Command Line Interface)** untuk menjamin efisiensi eksekusi maksimal.
+* **Compiler dan Alat:**
+  * **C++:** Menggunakan compiler `g++ (MinGW/GCC)` atau **Dev-C++**.
+  * **Python:** Menggunakan interpreter `Python 3.x` dengan **VS Code**.
 ### 📥 Cara Mengunduh Repositori
 Anda dapat menduplikasi seluruh isi repositori ini ke perangkat lokal Anda dengan langkah-langkah berikut:
 
 1. Buka Terminal atau Command Prompt.
 2. Jalankan perintah *clone* berikut:
    ```bash
-   git clone [https://github.com/username/nama-repo.git](https://github.com/username/nama-repo.git)
+   git clone https://github.com/mancantak123/my-coding.git
