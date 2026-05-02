@@ -49,3 +49,72 @@ Anda dapat menduplikasi seluruh isi repositori ini ke perangkat lokal Anda denga
 2. Jalankan perintah *clone* berikut:
    ```bash
    git clone https://github.com/mancantak123/my-coding.git
+
+<h2 align="center">Panduan competitve programing</h2>
+
+<p align="center">
+  Gulir dan pilih penjelasan atau panduan folder yang anda cari , di bawah ini untuk melihat panduan teknis.
+</p>
+
+<hr />
+
+<details style="margin-bottom: 20px; border: 1px solid #333; border-radius: 8px; background: #1a1a1a;">
+  <summary style="padding: 15px; cursor: pointer; font-weight: bold; color: #fff; background: #2d2d2d; border-radius: 8px;">
+    📂 Paduan Competitive programing 1 & 2 ▼
+  </summary>
+  <br>
+  <p><i><b>Competitive programing</b></i> adalah program pengenalan dan contoh program competitive , dimana anda mengenal nama batasan waktu dan batasan memory untuk program , selain itu anda dapat menemukan batasan tipe Data yang digunakan oleh program</p>
+  
+  <h3>Deskripsi</h3>
+<p>
+  Diberikan <i>N</i> buah bilangan bulat: <i>A</i><sub>1</sub> hingga <i>A</i><sub><i>N</i></sub>. 
+  Anda ingin mengetahui, untuk setiap 1 &le; <i>i</i> &le; <i>N</i>, berapakah jumlah dari 
+  keseluruhan bilangan bulat tersebut kecuali <i>A<sub>i</sub></i>.
+</p>
+<h3>Masukan</h3>
+<p>Masukan diberikan dalam format berikut:</p>
+
+<div style="background-color: #0d1117; color: white; padding: 15px; border-radius: 8px; font-family: monospace;">
+    N<br>
+    A<sub>1</sub><br>
+    :<br>
+    A<sub>N</sub>
+</div>
+
+<h3>Keluaran</h3>
+<p>
+    Keluarkan <i>N</i> buah baris. Baris ke-<i>i</i> berisi jumlah dari keseluruhan bilangan bulat tersebut kecuali <i>A<sub>i</sub></i>.
+</p>
+<h3>Contoh Masukan</h3>
+
+<div>
+    8<br>
+    100<br>
+    281923<br>
+    7<br>
+    1000000<br>
+    777777<br>
+    123456<br>
+    9999999<br>
+    7239
+</div>
+  
+</details>
+<details style="margin-bottom: 20px; border: 1px solid #333; border-radius: 8px; background: #1a1a1a;">
+  <summary style="padding: 15px; cursor: pointer; font-weight: bold; color: #fff; background: #2d2d2d; border-radius: 8px;">
+    📂 SEARCH: /folder-kedua-anda ▼
+  </summary>
+  <div style="padding: 20px; color: #fff;">
+    <p align="center"><i>Konten panduan folder kedua akan muncul di sini saat dibuka.</i></p>
+  </div>
+</details>
+<details style="margin-bottom: 20px; border: 1px solid #333; border-radius: 8px; background: #1a1a1a;">
+  <summary style="padding: 15px; cursor: pointer; font-weight: bold; color: #fff; background: #2d2d2d; border-radius: 8px;">
+    📂 SEARCH: /folder-tambahan-anda ▼
+  </summary>
+  <div style="padding: 20px; color: #fff;">
+    <p align="center"><i>Konten panduan folder tambahan akan muncul di sini saat dibuka.</i></p>
+  </div>
+</details>
+<hr />
+<p align="right"><i>Base Engine v1.3 | Fixed Structure</i></p>
