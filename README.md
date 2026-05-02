@@ -193,4 +193,4 @@ BUKAN
   </div>
 </details>
 <hr />
-<p align="right"><i>Base Engine v1.3 | Fixed Structure</i></p>
+
