@@ -52,7 +52,7 @@ Anda dapat menduplikasi seluruh isi repositori ini ke perangkat lokal Anda denga
 <h2 align="center">Panduan competitve programing</h2>
 
 <p align="justify">
-  <b>Gulir dan pilih penjelasan atau panduan folder yang anda cari</b> , di bawah ini untuk melihat panduan teknis . Sebagian besar materi pemrograman kompetitif dalam repositori ini diambil langsung dari soal-soal latihan pada platform TLX (https://tlx.toki.id/courses).
+  <b>Gulir dan pilih penjelasan atau panduan folder yang anda cari(masih dalam pengembangaan)</b> , di bawah ini untuk melihat panduan teknis . Sebagian besar materi pemrograman kompetitif dalam repositori ini diambil langsung dari soal-soal latihan pada platform TLX (https://tlx.toki.id/courses).
 </p>
 
 <hr />
