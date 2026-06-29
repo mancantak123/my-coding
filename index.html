@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta http-equiv="refresh" content="0; url=https://github.com/mancantak123/my-coding">
-    
     <title>Membuka Repositori...</title>
-    
     <script>
         function redirect() {
             var targetUrl = "https://github.com/mancantak123/my-coding";
             
-            // 1. JIKA ANDROID: Paksa tendang keluar ke aplikasi Google Chrome eksternal
+            // 1. JIKA ANDROID: Tetap paksa keluar ke Google Chrome eksternal
             if (/Android/i.test(navigator.userAgent)) {
                 window.location.href = "intent://" + targetUrl.replace(/^https?:\/\//, "") + "#Intent;scheme=https;package=com.android.chrome;end";
             } 
-            // 2. JIKA SELAIN ANDROID (iOS/PC): Alihkan langsung menggunakan JS biasa
+            // 2. JIKA IOS / IPHONE: Karena auto-keluar diblokir, kita paksa browser Instagram
+            // untuk membuka link GitHub biasa dengan metode 'replace' agar tidak blank.
             else {
-                window.location.href = targetUrl;
+                window.location.replace(targetUrl);
             }
         }
         window.onload = redirect;
     </script>
 </head>
 <body style="text-align: center; font-family: sans-serif; padding-top: 50px; background-color: #fafafa;">
-    <p style="color: #666; font-size: 16px;">Mengarahkan ke GitHub, mohon tunggu sebentar...</p>
+    <p style="color: #666; font-size: 16px;">Mengarahkan ke GitHub...</p>
 </body>
 </html>
