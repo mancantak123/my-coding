@@ -3,44 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membuka Repositori...</title>
+    <title>Buka Repositori</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; text-align: center; background-color: #fafafa; color: #262626; padding: 40px 20px; }
-        .container { max-width: 400px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .btn { display: inline-block; background-color: #24292e; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 20px; cursor: pointer; border: none; font-size: 16px; }
-        .instruction { font-size: 14px; color: #8e8e8e; margin-top: 20px; border-top: 1px solid #dbdbdb; padding-top: 15px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; text-align: center; background-color: #f4f6f9; color: #333; padding: 30px 15px; margin: 0; }
+        .container { max-width: 400px; margin: 0 auto; background: white; padding: 25px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        h3 { margin-top: 0; color: #24292e; }
+        p { font-size: 14px; color: #586069; line-height: 1.5; }
+        .btn-copy { display: block; width: 100%; background-color: #007bff; color: white; padding: 12px 0; border: none; border-radius: 8px; font-weight: bold; font-size: 15px; cursor: pointer; margin: 15px 0; transition: background 0.2s; }
+        .btn-copy:active { background-color: #0056b3; }
+        .alert-box { display: none; background-color: #d4edda; color: #155724; padding: 10px; border-radius: 8px; font-size: 13px; margin-bottom: 15px; font-weight: bold; }
+        .guide-box { background-color: #f8f9fa; border-left: 4px solid #28a745; padding: 12px; border-radius: 0 8px 8px 0; text-align: left; margin-top: 20px; }
+        .guide-title { font-weight: bold; color: #1e7e34; font-size: 14px; margin-bottom: 6px; display: flex; align-items: center; }
+        ol { margin: 0; padding-left: 20px; font-size: 13px; color: #495057; }
+        li { margin-bottom: 6px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h3>Mengarahkan ke GitHub...</h3>
-        <p>Jika halaman tidak berpindah secara otomatis, silakan klik tombol di bawah ini:</p>
-        
-        <!-- Perubahan Utama: Fungsi handleLink() dipicu SETIAP KALI tombol diklik -->
-        <button onclick="handleLink()" class="btn">Buka di Browser Utama</button>
-        
-        <div class="instruction">
-            <p><strong>Pengguna iPhone / iOS:</strong><br>Jika halaman *blank*, ketuk ikon <b>Kompas</b> atau <b>Titik Tiga</b> di pojok kanan/bawah layar Instagram, lalu pilih <b>"Buka di Safari"</b>.</p>
-        </div>
+
+<div class="container">
+    <h3>Buka di Browser Utama 🚀</h3>
+    <p>Instagram membatasi pembukaan situs eksternal secara otomatis. Silakan gunakan salah satu cara mudah di bawah ini:</p>
+    
+    <div id="successAlert" class="alert-box">✓ Link berhasil disalin!</div>
+    
+    <button class="btn-copy" onclick="copyLink()">📋 Salin Link & Buka Manual</button>
+    
+    <div class="guide-box">
+        <div class="guide-title">💡 Cara Cepat Lewat Instagram:</div>
+        <ol>
+            <li>Ketuk ikon <b>titik tiga (⋮)</b> di pojok kanan atas layar ini.</li>
+            <li>Pilih opsi <b>"Buka di Browser"</b> (atau <b>Open in Chrome/Safari</b>).</li>
+            <li>Selesai! Halaman akan langsung berpindah dengan lancar.</li>
+        </ol>
     </div>
+</div>
 
-    <script>
-        var targetUrl = "https://github.com/mancantak123/my-coding";
+<script>
+    function copyLink() {
+        var linkText = "https://github.com/mancantak123/my-coding";
+        
+        // Proses Salin Tautan
+        var tempInput = document.createElement("input");
+        tempInput.value = linkText;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); /* Untuk HP */
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        
+        // Tampilkan Notifikasi Sukses
+        var alertBox = document.getElementById("successAlert");
+        alertBox.style.display = "block";
+        
+        // Beri tahu user untuk paste ke browser jika mereka mau
+        setTimeout(function() {
+            alertBox.style.display = "none";
+        }, 3000);
+    }
+</script>
 
-        function handleLink() {
-            if (/Android/i.test(navigator.userAgent)) {
-                // Skema intent murni yang diikat pada event klik agar selalu memicu Chrome setiap kali ditekan
-                window.location.href = "intent://" + targetUrl.replace(/^https?:\/\//, "") + "#Intent;scheme=https;browser_fallback_url=" + encodeURIComponent(targetUrl) + ";package=com.android.chrome;end";
-            } else {
-                window.location.href = targetUrl;
-            }
-        }
-
-        // Jalankan otomatis di awal, tapi jika user kembali (back), tombol tetap berfungsi lewat onclick
-        window.onload = function() {
-            // Beri sedikit jeda 300ms agar browser internal Instagram siap mengeksekusi intent
-            setTimeout(handleLink, 300);
-        };
-    </script>
 </body>
 </html>
