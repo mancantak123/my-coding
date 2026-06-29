@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membuka Repositori...</title>
+    <title>Redirecting...</title>
     <script>
-        function redirect() {
+        // Trik khusus untuk memaksa keluar dari In-App Browser Instagram
+        function forceOut() {
             var targetUrl = "https://github.com/mancantak123/my-coding";
             
-            // 1. JIKA ANDROID: Tetap paksa keluar ke Google Chrome eksternal
+            // Jika dibuka di Android (Instagram Browser sering menyerah kalau dipicu download intent)
             if (/Android/i.test(navigator.userAgent)) {
                 window.location.href = "intent://" + targetUrl.replace(/^https?:\/\//, "") + "#Intent;scheme=https;package=com.android.chrome;end";
-            } 
-            // 2. JIKA IOS / IPHONE: Karena auto-keluar diblokir, kita paksa browser Instagram
-            // untuk membuka link GitHub biasa dengan metode 'replace' agar tidak blank.
-            else {
-                window.location.replace(targetUrl);
+            } else {
+                // Untuk iOS/Umum, langsung alihkan biasa
+                window.location.href = targetUrl;
             }
         }
-        window.onload = redirect;
+        window.onload = forceOut;
     </script>
 </head>
-<body style="text-align: center; font-family: sans-serif; padding-top: 50px; background-color: #fafafa;">
-    <p style="color: #666; font-size: 16px;">Mengarahkan ke GitHub...</p>
+<body>
+    <div style="text-align: center; margin-top: 50px; font-family: sans-serif;">
+        <p>Membuka repositori di browser utama...</p>
+        <p>Jika tidak berpindah, <a href="https://github.com/mancantak123/my-coding" target="_blank" style="color: #007bff; font-weight: bold;">Klik di Sini</a></p>
+    </div>
 </body>
 </html>
