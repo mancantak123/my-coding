@@ -1,66 +1,33 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buka Repositori</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; text-align: center; background-color: #f4f6f9; color: #333; padding: 30px 15px; margin: 0; }
-        .container { max-width: 400px; margin: 0 auto; background: white; padding: 25px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        h3 { margin-top: 0; color: #24292e; }
-        p { font-size: 14px; color: #586069; line-height: 1.5; }
-        .btn-copy { display: block; width: 100%; background-color: #007bff; color: white; padding: 12px 0; border: none; border-radius: 8px; font-weight: bold; font-size: 15px; cursor: pointer; margin: 15px 0; transition: background 0.2s; }
-        .btn-copy:active { background-color: #0056b3; }
-        .alert-box { display: none; background-color: #d4edda; color: #155724; padding: 10px; border-radius: 8px; font-size: 13px; margin-bottom: 15px; font-weight: bold; }
-        .guide-box { background-color: #f8f9fa; border-left: 4px solid #28a745; padding: 12px; border-radius: 0 8px 8px 0; text-align: left; margin-top: 20px; }
-        .guide-title { font-weight: bold; color: #1e7e34; font-size: 14px; margin-bottom: 6px; display: flex; align-items: center; }
-        ol { margin: 0; padding-left: 20px; font-size: 13px; color: #495057; }
-        li { margin-bottom: 6px; }
-    </style>
+    <title>Membuka di Chrome...</title>
 </head>
-<body>
+<body style="text-align: center; font-family: sans-serif; padding-top: 50px;">
 
-<div class="container">
-    <h3>Buka di Browser Utama 🚀</h3>
-    <p>Instagram membatasi pembukaan situs eksternal secara otomatis. Silakan gunakan salah satu cara mudah di bawah ini:</p>
+    <h3>Membuka di Google Chrome...</h3>
+    <p>Jika halaman tidak berpindah otomatis, silakan klik tombol di bawah ini:</p>
     
-    <div id="successAlert" class="alert-box">✓ Link berhasil disalin!</div>
-    
-    <button class="btn-copy" onclick="copyLink()">📋 Salin Link & Buka Manual</button>
-    
-    <div class="guide-box">
-        <div class="guide-title">💡 Cara Cepat Lewat Instagram:</div>
-        <ol>
-            <li>Ketuk ikon <b>titik tiga (⋮)</b> di pojok kanan atas layar ini.</li>
-            <li>Pilih opsi <b>"Buka di Browser"</b> (atau <b>Open in Chrome/Safari</b>).</li>
-            <li>Selesai! Halaman akan langsung berpindah dengan lancar.</li>
-        </ol>
-    </div>
-</div>
+    <!-- Tombol Manual khusus Android -->
+    <button onclick="bukaChrome()" style="padding: 12px 24px; font-weight: bold; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Buka di Browser Utama
+    </button>
 
-<script>
-    function copyLink() {
-        var linkText = "https://github.com/mancantak123/my-coding";
-        
-        // Proses Salin Tautan
-        var tempInput = document.createElement("input");
-        tempInput.value = linkText;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); /* Untuk HP */
-        document.execCommand("copy");
-        document.body.removeChild(tempInput);
-        
-        // Tampilkan Notifikasi Sukses
-        var alertBox = document.getElementById("successAlert");
-        alertBox.style.display = "block";
-        
-        // Beri tahu user untuk paste ke browser jika mereka mau
-        setTimeout(function() {
-            alertBox.style.display = "none";
-        }, 3000);
-    }
-</script>
+    <script>
+        var linkTujuan = "github.com/mancantak123/my-coding";
+
+        function bukaChrome() {
+            // Memaksa Android membuka Google Chrome menggunakan skema intent murni
+            window.location.href = "intent://" + linkTujuan + "#Intent;scheme=https;package=com.android.chrome;end";
+        }
+
+        // Jalankan otomatis saat halaman pertama kali dimuat
+        window.onload = function() {
+            bukaChrome();
+        };
+    </script>
 
 </body>
 </html>
