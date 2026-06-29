@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="refresh" content="0; url=https://github.com/mancantak123/my-coding">
+    
     <title>Membuka Repositori...</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; text-align: center; background-color: #fafafa; color: #262626; padding: 40px 20px; }
-        .container { max-width: 400px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .btn { display: inline-block; background-color: #24292e; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 20px; }
-        .instruction { font-size: 14px; color: #8e8e8e; margin-top: 20px; border-top: 1px solid #dbdbdb; padding-top: 15px; }
-    </style>
+    
     <script>
         function redirect() {
             var targetUrl = "https://github.com/mancantak123/my-coding";
             
-            // 1. JIKA ANDROID: Paksa buka di Google Chrome eksternal
+            // 1. JIKA ANDROID: Paksa tendang keluar ke aplikasi Google Chrome eksternal
             if (/Android/i.test(navigator.userAgent)) {
                 window.location.href = "intent://" + targetUrl.replace(/^https?:\/\//, "") + "#Intent;scheme=https;package=com.android.chrome;end";
-            } else {
+            } 
+            // 2. JIKA SELAIN ANDROID (iOS/PC): Alihkan langsung menggunakan JS biasa
+            else {
                 window.location.href = targetUrl;
             }
         }
         window.onload = redirect;
     </script>
 </head>
-<body>
-    <p>Redirecting to GitHub.......</p>
+<body style="text-align: center; font-family: sans-serif; padding-top: 50px; background-color: #fafafa;">
+    <p style="color: #666; font-size: 16px;">Mengarahkan ke GitHub, mohon tunggu sebentar...</p>
 </body>
 </html>
