@@ -26,8 +26,8 @@ int main(){
 		}
 	}
 	
-	int min = 0;
-	int max = 0;
+	int min = 2000000;
+	int max = -1;
 	
 	for(short i =0; i < N;i++){
 		for(short j=i+1;j < N;j++){
