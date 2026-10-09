@@ -22,7 +22,6 @@ int main(){
         }
         
         total += hari[i];
-        
     }
     
     cout<<"jumlah tertinggi = "<<jumlah_tertinggi<<endl;
